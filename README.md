@@ -5,7 +5,9 @@
 # Project Description
 This project executes the Gale-Shapely algorithm for hospital-student matching where the hospital is the one proposing. In addition, there is a verifier to check whether the proposed match is valid and has no unstable pairings. 
 
-# Repository Structure 
+# Repository Structure
+
+.
 ├── plot_images/
 │   ├── matcher_runtime.png
 │   └── verifier_runtime
