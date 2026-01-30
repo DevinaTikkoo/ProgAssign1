@@ -7,10 +7,10 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 
 # Repository Structure
 
-.
+```text
 ├── plot_images/
 │   ├── matcher_runtime.png
-│   └── verifier_runtime
+│   └── verifier_runtime.png
 ├── src/
 │   ├── matcher.py
 │   └── verifier.py
@@ -24,7 +24,7 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 │   ├── example2.out
 │   ├── example3.out
 │   └── example4.out
-├── README.md
+└── README.md
 
 # Initial Assumptions: 
 1. Task B requires the out file produced in match A and as the Gale-Shapely algorithm always produced a stable matching, the only way to have INVALID or UNSTABLE output for the verifier is to manually provide a bad matching (.out) file. 
