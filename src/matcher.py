@@ -16,6 +16,7 @@
 #else
 #a rejects h
 #}
+import sys
 
 input_lines = []
 #clean edge case input
@@ -28,12 +29,12 @@ for line in open(0):
 
 #edge case: empty input file
 if len(input_lines) == 0:
-    print("ERROR: empty input file")
+    print("ERROR: empty input file", file=sys.stderr)
     exit()
 
 #edge case: invalid n
 if not input_lines[0].isdigit():
-    print("ERROR: first line must be an integer n")
+    print("ERROR: first line must be an integer n", file=sys.stderr)
     exit()
 
 #First line: integer n.
@@ -42,13 +43,13 @@ if not input_lines[0].isdigit():
 n = int(input_lines[0])
 #edge case: n = 0 -> no output
 if n == 0:
-    print("ERROR: n must be greater than 0")
+    print("ERROR: n must be greater than 0", file=sys.stderr)
     exit()
 
 #edge case: invalid number of lines
 expected_lines = 2 * n + 1
 if len(input_lines) != expected_lines:
-    print(f"ERROR: invalid input (expected {expected_lines} non-empty lines, got {len(input_lines)})")
+    print(f"ERROR: invalid input (expected {expected_lines} non-empty lines, got {len(input_lines)})", file=sys.stderr)
     exit()
 
 hospital_preferences = []
@@ -58,7 +59,7 @@ for i in range(1, n + 1):
     tokens = input_lines[i].split()
     #edge case: invalid number of preferences
     if len(tokens) != n:
-        print(f"ERROR: invalid hospital preference list (expected {n} preferences, got {len(tokens)})")
+        print(f"ERROR: invalid hospital preference list (expected {n} preferences, got {len(tokens)})", file=sys.stderr)
         exit()
     pref_list = []
     for val in tokens:
@@ -69,7 +70,7 @@ for i in range(n + 1, 2 * n + 1):
     tokens = input_lines[i].split()
     #edge case: invalid number of preferences
     if len(tokens) != n:
-        print(f"ERROR: invalid student preference list (expected {n} preferences, got {len(tokens)})")
+        print(f"ERROR: invalid student preference list (expected {n} preferences, got {len(tokens)})", file=sys.stderr)
         exit()
     pref_list = []
     for val in tokens:
