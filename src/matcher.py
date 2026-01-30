@@ -25,25 +25,58 @@ for line in open(0):
     clean_line = line.strip()
     if clean_line != "":
         input_lines.append(clean_line)
+
+#edge case: empty input file
+if len(input_lines) == 0:
+    print("ERROR: empty input file")
+    exit()
+
+#edge case: invalid n
+if not input_lines[0].isdigit():
+    print("ERROR: first line must be an integer n")
+    exit()
+
 #First line: integer n.
 #Next n lines: hospital preference lists.
 #Next n lines: student preference lists.
 n = int(input_lines[0])
+#edge case: n = 0 -> no output
+if n == 0:
+    print("ERROR: n must be greater than 0")
+    exit()
+
+#edge case: invalid number of lines
+expected_lines = 2 * n + 1
+if len(input_lines) != expected_lines:
+    print(f"ERROR: invalid input (expected {expected_lines} non-empty lines, got {len(input_lines)})")
+    exit()
+
 hospital_preferences = []
 student_preferences = []
 #next n lines: hospital preference lists
 for i in range(1, n + 1):
+    tokens = input_lines[i].split()
+    #edge case: invalid number of preferences
+    if len(tokens) != n:
+        print(f"ERROR: invalid hospital preference list (expected {n} preferences, got {len(tokens)})")
+        exit()
     pref_list = []
-    for val in input_lines[i].split():
+    for val in tokens:
         #convert to 0-indexed
         pref_list.append(int(val) - 1)
     hospital_preferences.append(pref_list)
 for i in range(n + 1, 2 * n + 1):
+    tokens = input_lines[i].split()
+    #edge case: invalid number of preferences
+    if len(tokens) != n:
+        print(f"ERROR: invalid student preference list (expected {n} preferences, got {len(tokens)})")
+        exit()
     pref_list = []
-    for val in input_lines[i].split():
+    for val in tokens:
         #convert to 0-indexed
         pref_list.append(int(val) - 1)
     student_preferences.append(pref_list)
+
 #smaller number higher pref
 student_rank_table = []
 for student in range(n):
