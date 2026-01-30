@@ -55,7 +55,7 @@ Then, run plot.py and check plot_images for the matcher_plot.png that measures m
 # Provided Examples 
 ##Note: Running all example files through Task A would result in out files that are valid stable in Task B. The following outcomes are manually written to handle edge cases for Task B. 
 
-1. test.in, test.out is a valid and stable match for when n = 3
+1. test1.in, test1.out is a valid and stable match for when n = 3
 
 2. test2.in, test2.out is a valid but unstable match for when n = 2. There is a blocking pair that prevents stability. 
 
