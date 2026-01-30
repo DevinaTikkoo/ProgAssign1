@@ -53,3 +53,4 @@ python src/verifier.py tests/example.in tests/example.out
 3. example3.in, example3.out is an invalid matching where n = 2. Student 2 is matched to hospitals 2 and 3, and hospital 3 has no unique student, meaning it should fail the validity check due to duplicate matching.
 
 4. example4.in, example4.out is an edge case where n =8, but only has 7 student preference lists. As n is unequal, running it through Task A would result in an error statement and fail the validity check for Task B. 
+
