@@ -1,7 +1,6 @@
 # ProgAssign1
-
- Devina Tikkoo, 61945909
- Hoang Nam Tran, 19547941
+ 1. Devina Tikkoo, 61945909
+ 2. Hoang Nam Tran, 19547941
 
 # Project Description
 This project executes the Gale-Shapely algorithm for hospital-student matching where the hospital is the one proposing. In addition, there is a verifier to check whether the proposed match is valid and has no unstable pairings. 
