@@ -39,8 +39,17 @@ python src/matchingengine.py < tests/example.in > tests/example.out
 #output will be written to the out file in the tests folder
 
 Task B: 
-python src/verifier.py tests/example.in tests/match.out
+python src/verifier.py tests/example.in tests/example.out
 
 #output will be either INVALID or UNSTABLE with a short reason, else VALID STABLE
 
 # Provided Examples 
+##Note: Running all example files through Task A would result in out files that are valid stable in Task B. The following outcomes are manually written to handle edge cases for Task B. 
+
+1. example.in, example.out is a valid and stable match for when n = 3
+
+2. example2.in, example2.out is a valid but unstable match for when n = 2. There is a blocking pair that prevents stability. 
+
+3. example3.in, example3.out is an invalid matching where n = 2. Student 2 is matched to hospitals 2 and 3, and hospital 3 has no unique student, meaning it should fail the validity check due to duplicate matching.
+
+4. example4.in, example4.out is an edge case where n =8, but only has 7 student preference lists. As n is unequal, running it through Task A would result in an error statement and fail the validity check for Task B. 
