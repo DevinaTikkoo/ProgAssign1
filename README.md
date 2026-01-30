@@ -72,5 +72,5 @@ We measured the running time of the matching engine as well the verifier on sepa
 
 It is noted that the matcher's runtime increases rapidly as n grows by a factor of 2. The curve mimics quadratic time, which aligns with the theoretical worst-case for Gale-Shapely algorithm being O(n^2) as the n hospitals could propose to n students each. 
 
-The verifier's runtime also increases quadratically, but at a slower rate than the matcher. This is because the verifier checks validity and stability, meaning it requires more nested scans over preference lists. In worst case, the verifier goes through n hospitals with n students each, leading to O(n^2) time. 
+The verifier's runtime also increases quadratically, but at a faster rate than the matcher. This is because the verifier checks validity and stability, meaning it requires more nested scans over preference lists. However, it takes in smaller inputs than the matcher, leading to quicker run times. In worst case, the verifier goes through n hospitals with n students each, leading to O(n^2) time. 
 
