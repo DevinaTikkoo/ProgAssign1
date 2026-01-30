@@ -85,6 +85,3 @@ while True:
 #hospital i is matched to student j.
 for hospital in range(n):
     print(hospital + 1, hospital_student[hospital] + 1)
-
-#how to test with example input
-#python matchingengine.py < example.in
