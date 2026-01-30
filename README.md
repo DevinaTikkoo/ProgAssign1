@@ -38,21 +38,27 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 After cloning the repository, run the following commands in command prompt or gitbash. 
 
 Task A: 
+```text
 python src/matcher.py < tests/test1.in > tests/test1.out
 
 #output will be written to the out file in the tests folder
+```
 
 Task B: 
+```text
 python src/verifier.py tests/test1.in tests/test1.out
 
 #output will be either INVALID or UNSTABLE with a short reason, else VALID STABLE
+```
 
 Task C: 
-The above task is portrayed at the bottom of this read me, but step-wise the examples can be generated via running generate_ex.py for n = 1, 2, 4, ..., 2048. After, use runtime.sh to measure the runtime with the following commands...
+The above task is portrayed at the bottom of this read me, but step-wise the examples can be generated via running generate_ex.py for n = 1, 2, 4, ..., 2048. After, use runtime.sh to measure the runtime with the following commands:
 
+```text
 chmod +x src/runtime.sh
 
 ./src/runtime.sh
+```
 
 Then, run plot.py and check plot_images for the matcher_plot.png that measures matcher run time compared to n and verifier_plot, which does the same but with the verifier. 
 
