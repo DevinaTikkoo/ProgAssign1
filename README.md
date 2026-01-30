@@ -63,7 +63,7 @@ chmod +x src/runtime.sh
 Then, run plot.py and check plot_images for the matcher_plot.png that measures matcher run time compared to n and verifier_plot, which does the same but with the verifier. 
 
 # Provided Examples 
-##Note: Running all example files through Task A would result in out files that are valid stable in Task B. Additionally, edge cases such as empty input files or unequal n will show an error written in the outfile when ran through task A. For task B, the following outcomes have been manually written to demonstrate edge cases.
+Note: Running all example files through Task A would result in out files that are valid stable in Task B. Additionally, edge cases such as empty input files or unequal n will show an error written in the outfile when ran through task A. For task B, the following outcomes have been manually written to demonstrate edge cases.
 
 1. test1.in, test1.out is a valid and stable match for when n = 3
 
