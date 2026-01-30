@@ -2,7 +2,7 @@
 sizes = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
 
 for n in sizes:
-    file_name = "tests/example_" + str(n) + ".in"
+    file_name = "tests/plot_tests/example_" + str(n) + ".in"
     output_file = open(file_name, "w")
     output_file.write(str(n) + "\n")
     #write hoxpital prefs increasing order
