@@ -5,7 +5,7 @@
 ## Project Description
 This project executes the Gale-Shapely algorithm for hospital-student matching where the hospital is the one proposing. In addition, there is a verifier to check whether the proposed match is valid and has no unstable pairings. 
 
-# Repository Structure
+## Repository Structure
 
 ```text
 ├── plot_images/
@@ -27,14 +27,14 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 └── README.md
 ```
 
-# Initial Assumptions: 
+## Initial Assumptions: 
 1. Task B requires the out file produced in match A and as the Gale-Shapely algorithm always produced a stable matching, the only way to have INVALID or UNSTABLE output for the verifier is to manually provide a bad matching (.out) file. 
 
 2. In file formatting: For task A and task B, we are assuming the input (.in) file contains first line with integer 'n', next 'n' lines are the hospital preference lists, and the following 'n' lines are student preference lists.
 
 3. Out file formatting: The outfile will contain n lines to be placed in the verifier and will always provide a stable matching. It is assumed the outfile from Task A is used as an input for Task B. 
 
-# Running Repository: 
+## Running Repository: 
 After cloning the repository, run the following commands in command prompt or gitbash. 
 
 Task A: 
@@ -62,8 +62,8 @@ chmod +x src/runtime.sh
 
 Then, run plot.py and check plot_images for the matcher_plot.png that measures matcher run time compared to n and verifier_plot, which does the same but with the verifier. 
 
-# Provided Examples 
-Note: Running all example files through Task A would result in out files that are valid stable in Task B. Additionally, edge cases such as empty input files or unequal n will show an error written in the outfile when ran through task A. For task B, the following outcomes have been manually written to demonstrate edge cases.
+## Provided Examples 
+### Note: Running all example files through Task A would result in out files that are valid stable in Task B. Additionally, edge cases such as empty input files or unequal n will show an error written in the outfile when ran through task A. For task B, the following outcomes have been manually written to demonstrate edge cases.
 
 1. test1.in, test1.out is a valid and stable match for when n = 3
 
@@ -73,7 +73,7 @@ Note: Running all example files through Task A would result in out files that ar
 
 4. test4.in, test4.out is an edge case where n =8, but only has 7 student preference lists. As n is unequal, running it through Task A would result in an error statement appearing in the out \file and fail the validity check for Task B. 
 
-# Task C: Scalability 
+## Task C: Scalability 
 We measured the running time of the matching engine as well the verifier on separate graphs against increasing values of n. Specifically, we generated data from n = 1, 2, 4, 8, ...2048 using generate_ex,py, measured run time with runtime.sh, and used matplotlib to generate the graphs in plot.py. The graphs can be found below.
 
 ![Matcher Running Time](plot_images/matcher_plot.png)
