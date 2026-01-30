@@ -53,7 +53,7 @@ The above task is portrayed at the bottom of this read me, but step-wise the exa
 Then, run plot.py and check plot_images for the matcher_plot.png that measures matcher run time compared to n and verifier_plot, which does the same but with the verifier. 
 
 # Provided Examples 
-##Note: Running all example files through Task A would result in out files that are valid stable in Task B. The following outcomes are manually written to handle edge cases for Task B. 
+##Note: Running all example files through Task A would result in out files that are valid stable in Task B. Additionally, edge cases such as empty input files or unequal n will show an error written in the outfile when ran through task A. For task B, the following outcomes have been manually written to demonstrate edge cases.
 
 1. test1.in, test1.out is a valid and stable match for when n = 3
 
@@ -61,7 +61,7 @@ Then, run plot.py and check plot_images for the matcher_plot.png that measures m
 
 3. test3.in, test3.out is an invalid matching where n = 2. Student 2 is matched to hospitals 2 and 3, and hospital 3 has no unique student, meaning it should fail the validity check due to duplicate matching.
 
-4. test4.in, test4.out is an edge case where n =8, but only has 7 student preference lists. As n is unequal, running it through Task A would result in an error statement and fail the validity check for Task B. 
+4. test4.in, test4.out is an edge case where n =8, but only has 7 student preference lists. As n is unequal, running it through Task A would result in an error statement appearing in the out \file and fail the validity check for Task B. 
 
 # Task C: Scalability 
 We measured the running time of the matching engine as well the verifier on separate graphs against increasing values of n. Specifically, we generated data from n = 1, 2, 4, 8, ...2048 using generate_ex,py, measured run time with runtime.sh, and used matplotlib to generate the graphs in plot.py. The graphs can be found below.
