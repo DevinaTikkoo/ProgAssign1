@@ -25,6 +25,7 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 │   ├── example3.out
 │   └── example4.out
 └── README.md
+```text
 
 # Initial Assumptions: 
 1. Task B requires the out file produced in match A and as the Gale-Shapely algorithm always produced a stable matching, the only way to have INVALID or UNSTABLE output for the verifier is to manually provide a bad matching (.out) file. 
