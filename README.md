@@ -27,14 +27,14 @@ This project executes the Gale-Shapely algorithm for hospital-student matching w
 └── README.md
 ```
 
-## Initial Assumptions: 
+## Initial Assumptions
 1. Task B requires the out file produced in match A and as the Gale-Shapely algorithm always produced a stable matching, the only way to have INVALID or UNSTABLE output for the verifier is to manually provide a bad matching (.out) file. 
 
 2. In file formatting: For task A and task B, we are assuming the input (.in) file contains first line with integer 'n', next 'n' lines are the hospital preference lists, and the following 'n' lines are student preference lists.
 
 3. Out file formatting: The outfile will contain n lines to be placed in the verifier and will always provide a stable matching. It is assumed the outfile from Task A is used as an input for Task B. 
 
-## Running Repository: 
+## Running Repository
 After cloning the repository, run the following commands in command prompt or gitbash. 
 
 Task A: 
